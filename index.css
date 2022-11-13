@@ -2,40 +2,45 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-}
+ }
 main {
     display: flex;
-    flex-wrap: wrap;
     height: 100vh;
 }
-
+section.left{
+    width: 50%;
+    height: 100vh;
+}
 section.left > img {
     width: 100%;
     height: 100%;
 }
-section.right {
-    border-radius: 10px;
+section.right {  
+    width: 50%;
+    height: 100vh;
+    background-color: white;
+    margin-left: -20px;
+    border-radius: 20px;
     display: flex;
     justify-content: center; 
     align-items: center;
-    flex: 1;
     flex-direction: column;
 }
 section.right > form {
-    width: 70%;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
+    justify-content: center;
+}
+input  {
+    outline-style: none;
 }
 section.right > form > header {
-    width: 100%;
-    height: 100%;
-    display: flex;
     align-items: center;
     justify-content: center; 
     
 }
-selection.right > form > img {
+section.right > form > img {
     width: 100%;
     height: 100%;
     }
@@ -51,8 +56,19 @@ selection.right > form > img {
     border-bottom: 1px solid blue;
     border-left: 1px solid blue;
     border-radius: 4px;
+} 
+.checkbox{
+    display: none;
 }
-
+.check:active {
+    box-shadow: 3px 3px 3px 3px gray;
+    border-radius: 20px;
+} 
+.SignWith > a:hover {
+    border: 1px solid gray;
+    border-radius: 50%;
+    box-shadow: 3px 3px 3px 3px  gray;
+}
 .login {
     text-align: center;
     padding: 20px;
@@ -65,9 +81,21 @@ selection.right > form > img {
     display: flex;
     justify-content: space-evenly;
 }
-@media (max-width: 375px) {
+@media (max-width: 600px) {
     main {
-    width: 375px;
-    height: 812px;
+    width: 100%;
+    height: 100%;   
+    display: flex;
+    flex-direction: column;
     } 
+    main > section.left {
+        width: 100%;
+        height: 50%;
+    }
+
+    main > section.right {
+        width: 100%;
+        height: 50%;
+        margin-bottom: 40px;
+    }   
 }
